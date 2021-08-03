@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_divider">1dp</dimen>
+    <dimen name="dp_border">10dp</dimen>
+    <dimen name="dp_height_text_cal">120dp</dimen>
+    <dimen name="dp_height_text_result">80dp</dimen>
+    <dimen name="dp_size_button">80dp</dimen>
+    <dimen name="dp_padding_10">10dp</dimen>
+    <dimen name="dp_margin">8dp</dimen>
+    <dimen name="dp_margin_10">10dp</dimen>
+    <dimen name="dp_margin_20">20dp</dimen>
+    <dimen name="dp_margin_30">30dp</dimen>
+    <dimen name="sp_text_button">40sp</dimen>
+    <dimen name="sp_text_result">40sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+</resources>
