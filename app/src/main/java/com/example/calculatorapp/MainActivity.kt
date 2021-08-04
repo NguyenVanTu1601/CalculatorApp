@@ -8,7 +8,8 @@ import com.example.calculatorapp.databinding.ActivityMainBinding
 import java.util.*
 import kotlin.collections.ArrayList
 
-class MainActivity : AppCompatActivity(), View.OnClickListener{
+class MainActivity : AppCompatActivity(), View.OnClickListener {
+
     private lateinit var binding: ActivityMainBinding
     private var buttons = listOf<Button>()
     private var textCalculate = Constants.DEFAULT.DEFAULT_STRING_EMPTY
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
         setItemOnClicks()
     }
 
-    private fun setItemOnClicks(){
+    private fun setItemOnClicks() {
         with(binding) {
             buttons = listOf(
                 btnNumberZero,
@@ -71,24 +72,25 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
         }
     }
 
-    private fun addTextCalculator(text: String){
+    private fun addTextCalculator(text: String) {
         textCalculate += text
         binding.tvCalculator.text = textCalculate
     }
 
-    private fun priority(operator:String):Int{
-        return when(operator){
+    private fun priority(operator: String): Int {
+        return when (operator) {
             Constants.OPERATOR.OPERATOR_PLUS, Constants.OPERATOR.OPERATOR_MINUS -> 1
             Constants.OPERATOR.OPERATOR_DIV, Constants.OPERATOR.OPERATOR_MUL -> 2
             else -> -1
         }
     }
 
-    private fun checkOperator(text : String): Boolean{
-        if(text == Constants.OPERATOR.OPERATOR_PLUS ||
+    private fun checkOperator(text: String): Boolean {
+        if (text == Constants.OPERATOR.OPERATOR_PLUS ||
             text == Constants.OPERATOR.OPERATOR_MUL ||
             text == Constants.OPERATOR.OPERATOR_MINUS ||
-            text == Constants.OPERATOR.OPERATOR_DIV) return true
+            text == Constants.OPERATOR.OPERATOR_DIV
+        ) return true
         return false
     }
 
@@ -116,26 +118,29 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
         val arrayPrefix = ArrayList<String>()
         val stackOperator = Stack<String>()
         var num = Constants.DEFAULT.DEFAULT_STRING_EMPTY
-        for(i in text.indices){
-            if (!checkOperator(text[i].toString())){
+        for (i in text.indices) {
+            if (!checkOperator(text[i].toString())) {
                 num += text[i]
-                if(i == text.length - 1){
+                if (i == text.length - 1) {
                     arrayPrefix.add(num)
                     num = Constants.DEFAULT.DEFAULT_STRING_EMPTY
                 }
-            }else{
+            } else {
                 arrayPrefix.add(num)
                 num = Constants.DEFAULT.DEFAULT_STRING_EMPTY
-                while(!stackOperator.isEmpty() && priority(text[i].toString()) <= priority(stackOperator.peek())){
+                while (!stackOperator.isEmpty() && priority(text[i].toString()) <= priority(
+                        stackOperator.peek()
+                    )
+                ) {
                     arrayPrefix.add(stackOperator.pop())
                 }
                 stackOperator.push(text[i].toString())
             }
         }
-        while(!stackOperator.isEmpty()){
+        while (!stackOperator.isEmpty()) {
             arrayPrefix.add(stackOperator.pop())
         }
-        if(num.isNotEmpty()){
+        if (num.isNotEmpty()) {
             arrayPrefix.add(num)
         }
         return arrayPrefix
