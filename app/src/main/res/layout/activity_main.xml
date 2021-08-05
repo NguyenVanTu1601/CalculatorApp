@@ -13,7 +13,7 @@
         android:gravity="end"
         android:maxLength="20"
         android:paddingTop="@dimen/dp_10"
-        android:paddingEnd="@dimen/dp_10"
+        android:paddingHorizontal="@dimen/dp_10"
         android:text="@string/text_result_default"
         android:textColor="@color/mine_shaft"
         android:textSize="@dimen/sp_40"
@@ -37,7 +37,7 @@
         android:gravity="end"
         android:maxLength="20"
         android:paddingTop="@dimen/dp_10"
-        android:paddingEnd="@dimen/dp_10"
+        android:paddingHorizontal="@dimen/dp_10"
         android:text="@string/text_result_default"
         android:textColor="@color/mine_shaft"
         android:textSize="@dimen/sp_40"
@@ -53,31 +53,24 @@
         android:layout_marginTop="@dimen/dp_30"
         app:layout_constraintBottom_toTopOf="@+id/line_2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/line_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_result">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_number_seven"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_number_seven"
-            android:textSize="@dimen/sp_40"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_number_eight"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_number_eight"
-            android:textSize="@dimen/sp_40"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_number_nine"
             app:layout_constraintStart_toEndOf="@id/btn_number_seven"
@@ -85,12 +78,9 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_number_nine"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_number_nine"
-            android:textSize="@dimen/sp_40"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_operator_plus"
             app:layout_constraintStart_toEndOf="@id/btn_number_eight"
@@ -98,12 +88,9 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_operator_plus"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_operator_plus"
-            android:textSize="@dimen/sp_40"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -125,24 +112,18 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_number_four"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_number_four"
-            android:textSize="@dimen/sp_40"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_number_five"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_number_five"
-            android:textSize="@dimen/sp_40"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_number_six"
             app:layout_constraintStart_toEndOf="@id/btn_number_four"
@@ -150,12 +131,9 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_number_six"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_number_six"
-            android:textSize="@dimen/sp_40"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_operator_minus"
             app:layout_constraintStart_toEndOf="@id/btn_number_five"
@@ -163,12 +141,9 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_operator_minus"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_operator_minus"
-            android:textSize="@dimen/sp_40"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -183,31 +158,24 @@
         app:layout_constraintBottom_toTopOf="@+id/line_4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/line_2"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/line_4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/line_2">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_number_one"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_number_one"
-            android:textSize="@dimen/sp_40"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_number_two"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_number_two"
-            android:textSize="@dimen/sp_40"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_number_three"
             app:layout_constraintStart_toEndOf="@id/btn_number_one"
@@ -215,12 +183,9 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_number_three"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_number_three"
-            android:textSize="@dimen/sp_40"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_operator_mul"
             app:layout_constraintStart_toEndOf="@id/btn_number_two"
@@ -228,12 +193,9 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_operator_mul"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_operator_mul"
-            android:textSize="@dimen/sp_40"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -248,32 +210,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/line_3"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/line_3">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_number_zero"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_number_zero"
-            android:textSize="@dimen/sp_40"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_dot"
+            style="@style/buttonStyle"
             android:layout_width="@dimen/dp_80"
             android:layout_height="@dimen/dp_80"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_dot"
-            android:textSize="@dimen/sp_40"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_operator_div"
             app:layout_constraintStart_toEndOf="@id/btn_number_zero"
@@ -281,13 +236,9 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_operator_div"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_operator_div"
-            android:textSize="@dimen/sp_40"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_result"
             app:layout_constraintStart_toEndOf="@id/btn_dot"
@@ -295,13 +246,9 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_result"
-            android:layout_width="@dimen/dp_80"
-            android:layout_height="@dimen/dp_80"
+            style="@style/buttonStyle"
             android:background="@drawable/border_button"
-            android:gravity="center"
             android:text="@string/text_result"
-            android:textSize="@dimen/sp_40"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
