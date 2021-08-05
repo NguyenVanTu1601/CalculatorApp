@@ -25,5 +25,12 @@ object Constants {
     object DEFAULT {
         const val DEFAULT_ZERO = "0"
         const val DEFAULT_STRING_EMPTY = ""
+        const val DEFAULT_DOUBLE_ZERO = 0.0
+    }
+
+    object PRIORITY{
+        const val PRIORITY_ONE = 1
+        const val PRIORITY_TWO = 2
+        const val PRIORITY_DEFAULT = -1
     }
 }

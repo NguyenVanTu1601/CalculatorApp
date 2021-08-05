@@ -79,9 +79,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun priority(operator: String): Int {
         return when (operator) {
-            Constants.OPERATOR.OPERATOR_PLUS, Constants.OPERATOR.OPERATOR_MINUS -> 1
-            Constants.OPERATOR.OPERATOR_DIV, Constants.OPERATOR.OPERATOR_MUL -> 2
-            else -> -1
+            Constants.OPERATOR.OPERATOR_PLUS, Constants.OPERATOR.OPERATOR_MINUS -> Constants.PRIORITY.PRIORITY_ONE
+            Constants.OPERATOR.OPERATOR_DIV, Constants.OPERATOR.OPERATOR_MUL -> Constants.PRIORITY.PRIORITY_TWO
+            else -> Constants.PRIORITY.PRIORITY_DEFAULT
         }
     }
 
@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
         }
-        return if (!stackNumber.isEmpty()) stackNumber.pop().toDouble() else 0.0
+        return if (stackNumber.isNotEmpty()) stackNumber.pop().toDouble() else Constants.DEFAULT.DEFAULT_DOUBLE_ZERO
     }
 
     private fun convertPrefix(text: String): ArrayList<String> {
@@ -137,7 +137,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 stackOperator.push(text[i].toString())
             }
         }
-        while (!stackOperator.isEmpty()) {
+        while (stackOperator.isNotEmpty()) {
             arrayPrefix.add(stackOperator.pop())
         }
         if (num.isNotEmpty()) {
