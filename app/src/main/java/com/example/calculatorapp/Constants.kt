@@ -25,6 +25,7 @@ object Constants {
     object DEFAULT {
         const val DEFAULT_ZERO = "0"
         const val DEFAULT_STRING_EMPTY = ""
+        const val DEFAULT_NUMBER_ONE = 1
         const val DEFAULT_DOUBLE_ZERO = 0.0
     }
 
