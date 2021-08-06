@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">CalculatorApp</string>
+    <string name="text_operator_plus">+</string>
+    <string name="text_operator_minus">-</string>
+    <string name="text_operator_mul">*</string>
+    <string name="text_operator_div">/</string>
+
+    <string name="text_dot">.</string>
+    <string name="text_result">=</string>
+    
+    <string name="text_number_zero">0</string>
+    <string name="text_number_one">1</string>
+    <string name="text_number_two">2</string>
+    <string name="text_number_three">3</string>
+    <string name="text_number_four">4</string>
+    <string name="text_number_five">5</string>
+    <string name="text_number_six">6</string>
+    <string name="text_number_seven">7</string>
+    <string name="text_number_eight">8</string>
+    <string name="text_number_nine">9</string>
+    <string name="text_result_default">0</string>
+    <string name="text_error">Can not calculate</string>
+    
 </resources>
